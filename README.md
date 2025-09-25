@@ -17,7 +17,7 @@ string-calculator/
 ├── src/
 │   └── calculator.js       # Implementation
 ├── test/
-│   └── test.calculator.js  # Unit tests (Mocha + Chai)
+│   └── calculator.test.js  # Unit tests (Mocha + Chai)
 ├── package.json
 └── README.md
 ```
