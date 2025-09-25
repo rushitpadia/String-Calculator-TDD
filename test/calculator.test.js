@@ -40,4 +40,7 @@ describe("String Calculator TDD", () => {
         expect(calculator.add("1000,1001,5")).to.equal(1005);
         expect(calculator.add("1234,5678,10,20")).to.equal(30);
     });
+    it("Testcase 10: should support custom delimiters of any length", () => {
+        expect(calculator.add("//[***]\n1***2***3")).to.equal(6);
+    });
 });
