@@ -1,0 +1,19 @@
+{
+  "name": "string-calculator-tdd",
+  "version": "1.0.0",
+  "description": "string calculator: function takes string input and gives sum of the numbers as output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rushitpadia/String-Calculator-TDD.git"
+  },
+  "author": "rushit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rushitpadia/String-Calculator-TDD/issues"
+  },
+  "homepage": "https://github.com/rushitpadia/String-Calculator-TDD#readme"
+}

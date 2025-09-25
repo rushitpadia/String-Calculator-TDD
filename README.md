@@ -1,0 +1,35 @@
+# String Calculator (TDD Kata in Node.js)
+
+A simple **String Calculator** implemented in **Node.js** using **Test Driven Development (TDD)** principles.  
+
+The calculator exposes a single function:  
+
+```js
+add(numbers: string) => number
+```
+* Input: a string of numbers ( can be comma-separated numbers or define delimiter to separate numbers )
+* Output: the sum of those numbers (as an integer)
+
+
+## Project Structure
+```
+string-calculator/
+├── src/
+│   └── calculator.js       # Implementation
+├── test/
+│   └── test.calculator.js  # Unit tests (Mocha + Chai)
+├── package.json
+└── README.md
+```
+
+## Setup Installation
+```
+# Clone repo
+git clone git@github.com:rushitpadia/String-Calculator-TDD.git
+cd String-Calculator-TDD
+
+# Required Node version: v22.15.0 or +
+
+# Install dependencies
+npm install
+```
