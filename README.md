@@ -47,4 +47,5 @@ String Calculator TDD
     √ Testcase 2: should return the number itself if only one number is provided
     √ Testcase 3: should return sum of two numbers separated by comma
     √ Testcase 4: should return sum of multiple comma-separated numbers
+    √ Testcase 5: should handle new lines between numbers as well as commas
 ```
