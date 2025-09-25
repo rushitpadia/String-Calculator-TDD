@@ -35,4 +35,9 @@ describe("String Calculator TDD", () => {
         calculator.add("5\n6,7");
         expect(calculator.getCalledCount()).to.equal(3);
     });
+    it("Testcase 9: should ignore numbers bigger than 1000", () => {
+        expect(calculator.add("2,1001")).to.equal(2);
+        expect(calculator.add("1000,1001,5")).to.equal(1005);
+        expect(calculator.add("1234,5678,10,20")).to.equal(30);
+    });
 });
