@@ -29,7 +29,6 @@ describe("String Calculator TDD", () => {
         expect(() => calculator.add("-5")).to.throw("Negatives not allowed: -5");
     });
     it("Testcase 8: should track how many times Add method was called", () => {
-        const calculator = new StringCalculator();
         calculator.add("1,2");
         calculator.add("3,4");
         expect(calculator.getCalledCount()).to.equal(2);

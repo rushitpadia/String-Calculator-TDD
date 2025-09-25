@@ -50,4 +50,5 @@ String Calculator TDD
     √ Testcase 5: should handle new lines between numbers as well as commas
     √ Testcase 6: should support custom delimiters
     √ Testcase 7: should throw an exception when a negative number is provided
+    √ Testcase 8: should track how many times Add method was called
 ```

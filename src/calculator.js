@@ -1,5 +1,9 @@
 class StringCalculatorTDD {
+    constructor(){
+        this.addMethodCalled = 0;
+    }
     add(stringNumbers){
+        this.addMethodCalled++;
         if(stringNumbers === null || stringNumbers === "") return 0;
         let delimiterPattern = /[\n,]/;
         let numbers = stringNumbers;
@@ -17,6 +21,10 @@ class StringCalculatorTDD {
         if(negativeNumbers.length > 0) throw new Error(`Negatives not allowed: ${negativeNumbers.join(",")}`)
         
         return splitStringNumbers.reduce((sum, num) => sum + num,0);
+    }
+
+    getCalledCount(){
+        return this.addMethodCalled;
     }
 }
 
