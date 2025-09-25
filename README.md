@@ -49,4 +49,5 @@ String Calculator TDD
     √ Testcase 4: should return sum of multiple comma-separated numbers
     √ Testcase 5: should handle new lines between numbers as well as commas
     √ Testcase 6: should support custom delimiters
+    √ Testcase 7: should throw an exception when a negative number is provided
 ```

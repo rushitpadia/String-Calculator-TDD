@@ -9,8 +9,13 @@ function add(stringNumbers){
         delimiterPattern = new RegExp(`[${delimiter}\n,]`);
         numbers = numbers.substring(delimiterLineEndIndex + 1);
     }
-    const splitStringNumbers = numbers.split(delimiterPattern);
-    return splitStringNumbers.reduce((sum, num) => sum + parseInt(num),0);
+    const splitStringNumbers = numbers.split(delimiterPattern).map(Number);
+
+    // checks for negative numbers
+    const negativeNumbers = splitStringNumbers.filter(num => num < 0); 
+    if(negativeNumbers.length > 0) throw new Error(`Negatives not allowed: ${negativeNumbers.join(",")}`)
+    
+    return splitStringNumbers.reduce((sum, num) => sum + num,0);
 }
 
 module.exports = { add };

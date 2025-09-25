@@ -22,7 +22,7 @@ describe("String Calculator TDD", () => {
         expect(add("//;\n1;2")).to.equal(3);
         expect(add("//|\n2|3|4")).to.equal(9);
     });
-    it("should throw an exception when a negative number is provided", () => {
+    it("Testcase 7: should throw an exception when a negative number is provided", () => {
         expect(() => add("1,-2,3,-4")).to.throw("Negatives not allowed: -2,-4");
         expect(() => add("-5")).to.throw("Negatives not allowed: -5");
     });
