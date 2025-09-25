@@ -33,3 +33,15 @@ cd String-Calculator-TDD
 # Install dependencies
 npm install
 ```
+
+## Running Test
+```
+npm test
+```
+
+## Testcases
+```
+String Calculator TDD
+
+    √ Testcase 1: Should return 0 for an empty string
+```
