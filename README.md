@@ -45,4 +45,5 @@ String Calculator TDD
 
     √ Testcase 1: Should return 0 for an empty string
     √ Testcase 2: should return the number itself if only one number is provided
+    √ Testcase 3: should return sum of two numbers separated by comma
 ```
