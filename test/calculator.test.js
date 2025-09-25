@@ -12,4 +12,7 @@ describe("String Calculator TDD", () => {
     it("Testcase 3: should return sum of two numbers separated by comma", () => {
         expect(add("4,5")).to.equal(9);
     });
+    it("Testcase 4: should return sum of multiple comma-separated numbers", () => {
+        expect(add("1,2,3,4,5")).to.equal(15);
+    });
 });
