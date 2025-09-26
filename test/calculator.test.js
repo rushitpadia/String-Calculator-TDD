@@ -47,4 +47,7 @@ describe("String Calculator TDD", () => {
         expect(calculator.add("//[*][%]\n1*2%3")).to.equal(6);
         expect(calculator.add("//[***][%%]\n4***5%%6")).to.equal(15);
     });
+    it("Testcase 12: handles multiple delimiters with length longer than one char", () => {
+        expect(calculator.add("//[**][%%]\n1**2%%3")).to.equal(6);
+    });
 });
