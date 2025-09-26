@@ -53,4 +53,5 @@ String Calculator TDD
     √ Testcase 8: should track how many times Add method was called
     √ Testcase 9: should ignore numbers bigger than 1000
     √ Testcase 10: should support custom delimiters of any length
+    √ Testcase 11: should support multiple custom delimiters
 ```

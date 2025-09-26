@@ -5,20 +5,26 @@ class StringCalculatorTDD {
     add(stringNumbers){
         this.addMethodCalled++;
         if(stringNumbers === null || stringNumbers === "") return 0;
-        let delimiterPattern = /[\n,]/;
+        let allDelimiters = [",","\n"];
         let numbers = stringNumbers;
         // Handle custom delimiters
         if(numbers.startsWith("//")){
             const delimiterLineEndIndex = numbers.indexOf("\n"); //first \n position will be returned.
             const delimiterPart = numbers.substring(2, delimiterLineEndIndex);
-            let delimiter = delimiterPart;
             if(delimiterPart.startsWith("[") && delimiterPart.endsWith("]")){
-                delimiter = delimiterPart.slice(1, -1); // this will remove '[' and ']' so that we can have actual delimiter value
+                const regex = /\[(.*?)\]/g;
+                allDelimiters = [];
+                let matchFound;
+                while ((matchFound = regex.exec(delimiterPart)) != null) {
+                    allDelimiters.push(matchFound[1]);
+                }
+            } else {
+                allDelimiters = [delimiterPart];
             }
-            delimiterPattern = new RegExp(`[${delimiter}\n,]`);
             numbers = numbers.substring(delimiterLineEndIndex + 1);
         }
-        const splitStringNumbers = numbers.split(delimiterPattern).map(Number).filter(num => num <= 1000); //checks for number more then 1000
+        const delimiterRegex = new RegExp(allDelimiters.map(delim => escapeRegExpression(delim)).join("|"),"g");
+        const splitStringNumbers = numbers.split(delimiterRegex).map(Number).filter(num => num <= 1000); //checks for number more then 1000
     
         // checks for negative numbers
         const negativeNumbers = splitStringNumbers.filter(num => num < 0); 
@@ -29,6 +35,10 @@ class StringCalculatorTDD {
     getCalledCount(){
         return this.addMethodCalled;
     }
+}
+
+function escapeRegExpression(delim){
+    return delim.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // regex to remove special characters from delimiters
 }
 
 module.exports = StringCalculatorTDD;
