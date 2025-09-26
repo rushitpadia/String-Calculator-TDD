@@ -43,4 +43,8 @@ describe("String Calculator TDD", () => {
     it("Testcase 10: should support custom delimiters of any length", () => {
         expect(calculator.add("//[***]\n1***2***3")).to.equal(6);
     });
+    it("Testcase 11: should support multiple custom delimiters", () => {
+        expect(calculator.add("//[*][%]\n1*2%3")).to.equal(6);
+        expect(calculator.add("//[***][%%]\n4***5%%6")).to.equal(15);
+    });
 });
