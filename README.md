@@ -54,4 +54,5 @@ String Calculator TDD
     √ Testcase 9: should ignore numbers bigger than 1000
     √ Testcase 10: should support custom delimiters of any length
     √ Testcase 11: should support multiple custom delimiters
+    √ Testcase 12: handles multiple delimiters with length longer than one char
 ```
