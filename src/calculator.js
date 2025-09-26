@@ -10,7 +10,11 @@ class StringCalculatorTDD {
         // Handle custom delimiters
         if(numbers.startsWith("//")){
             const delimiterLineEndIndex = numbers.indexOf("\n"); //first \n position will be returned.
-            const delimiter = numbers.substring(2, delimiterLineEndIndex);
+            const delimiterPart = numbers.substring(2, delimiterLineEndIndex);
+            let delimiter = delimiterPart;
+            if(delimiterPart.startsWith("[") && delimiterPart.endsWith("]")){
+                delimiter = delimiterPart.slice(1, -1); // this will remove '[' and ']' so that we can have actual delimiter value
+            }
             delimiterPattern = new RegExp(`[${delimiter}\n,]`);
             numbers = numbers.substring(delimiterLineEndIndex + 1);
         }
