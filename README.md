@@ -2,13 +2,15 @@
 
 A simple **String Calculator** implemented in **Node.js** using **Test Driven Development (TDD)** principles.  
 
-The calculator exposes a single function:  
+The calculator exposes a class which has two methods (add & getCalledCount):  
 
 ```js
 add(numbers: string) => number
+// * Input: a string of numbers ( can be comma-separated numbers or define delimiter to separate numbers )
+// * Output: the sum of those numbers (as an integer)
+getCalledCount() => number
+// * Output: number (returns howmany times add method has been called)
 ```
-* Input: a string of numbers ( can be comma-separated numbers or define delimiter to separate numbers )
-* Output: the sum of those numbers (as an integer)
 
 
 ## Project Structure
@@ -56,3 +58,21 @@ String Calculator TDD
     √ Testcase 11: should support multiple custom delimiters
     √ Testcase 12: handles multiple delimiters with length longer than one char
 ```
+
+## Usage Example
+```js
+// Imports
+const StringCalculatorTDD = require("./src/calculator");
+
+// Initilization
+const calculator = new StringCalculatorTDD();
+
+// Call add method of the class
+console.log(calculator.add(""));            // 0
+console.log(calculator.add("5"));           // 5
+console.log(calculator.add("1,2"));         // 3
+console.log(calculator.add("1\n2,3\n4"));   // 10
+```
+
+## License
+This project is for educational & assessment purposes.

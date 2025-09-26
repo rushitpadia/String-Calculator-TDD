@@ -38,7 +38,7 @@ class StringCalculatorTDD {
 }
 
 function escapeRegExpression(delim){
-    return delim.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // regex to remove special characters from delimiters
+    return delim.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // regex to escape special characters from delimiters
 }
 
 module.exports = StringCalculatorTDD;
